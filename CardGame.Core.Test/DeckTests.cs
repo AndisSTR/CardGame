@@ -10,7 +10,7 @@ namespace CardGame.Core.Test
         public const int DeckLength = 52;
 
         [Fact]
-        public void GenerateDeck_AfterGeneration_ShouldReturnCorrectNumberOfCards()
+        public void GenerateDeck_AfterGeneration_ShouldReturn_CorrectNumberOfCards()
         {
             // Arrange
             var card = new Mock<ICard>();
@@ -25,7 +25,7 @@ namespace CardGame.Core.Test
         }
 
         [Fact]
-        public void Shuffle_AfterShuffle_ShouldReturnsNotEqual()
+        public void Shuffle_AfterShuffle_ShouldReturn_NotEqual()
         {
             // Arrange
             var card = new Mock<ICard>();
@@ -42,7 +42,7 @@ namespace CardGame.Core.Test
         }
 
         [Fact]
-        public void TakeCard_AfterCardIsTaken_ShouldReturnCorrectNumberOfCards()
+        public void TakeCard_AfterCardIsTaken_ShouldReturn_CorrectNumberOfCards()
         {
             // Arrange
             var card = new Mock<ICard>();
@@ -59,7 +59,7 @@ namespace CardGame.Core.Test
         }
 
         [Fact]
-        public void TakeCards_AfterCardsIsTaken_ShouldReturnCorrectNumberOfCards()
+        public void TakeCards_AfterCardsIsTaken_ShouldReturn_CorrectNumberOfCards()
         {
             // Arrange
             int cardsTaken = 8;
@@ -86,7 +86,7 @@ namespace CardGame.Core.Test
             // Act
             deck.GenerateDeck();
             var takenCard = deck.TakeCard();
-            var result = deck.Cards.Any(c => c.Suit == takenCard.Suit && c.Rank == takenCard.Rank);
+            var result = deck.Cards.Any(c => c.Suit == takenCard?.Suit && c.Rank == takenCard.Rank);
 
             // Assert
             Assert.False(result);

@@ -34,11 +34,11 @@ namespace CardGame.Core.Entities
             var rankLenght = Enum.GetNames(_card.Rank.GetType()).Length;
 
             Cards = Enumerable.Range(1, suitLenght)
-                .SelectMany(s => Enumerable.Range(1, rankLenght)
-                .Select(c => new Card()
+                .SelectMany(suit => Enumerable.Range(1, rankLenght)
+                .Select(rank => new Card()
                 {
-                    Suit = (Suit)s,
-                    Rank = (Rank)c
+                    Suit = (Suit)suit,
+                    Rank = (Rank)rank
                 }
             )).ToList();
         }
@@ -55,12 +55,17 @@ namespace CardGame.Core.Entities
         /// Take first card from deck
         /// </summary>
         /// <returns>card</returns>
-        public Card TakeCard()
+        public Card? TakeCard()
         {
-            var card = Cards.FirstOrDefault()!;
-            Cards.Remove(card);
+            if(Cards.Count != 0)
+            {
+                var card = Cards.FirstOrDefault()!;
+                Cards.Remove(card);
 
-            return card;
+                return card;
+            }
+
+            return null;
         }
 
         /// <summary>
