@@ -26,7 +26,7 @@ namespace CardGame.Core.Interfaces
         /// Take first card from deck
         /// </summary>
         /// <returns>card</returns>
-        Card TakeCard();
+        Card? TakeCard();
 
         /// <summary>
         /// Take number of cards from deck
