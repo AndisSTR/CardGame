@@ -15,6 +15,11 @@ namespace CardGame.Core.Entities
         public IHand Hand { get; set; }
 
         /// <summary>
+        /// Player score
+        /// </summary>
+        public int Score { get; set; }
+
+        /// <summary>
         /// Player is dealers
         /// </summary>
         public bool IsDealer { get; set; }

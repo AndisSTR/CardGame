@@ -17,5 +17,10 @@ namespace CardGame.Core.Entities
         /// Card suit
         /// </summary>
         public Suit Suit { get; set; }
+
+        /// <summary>
+        /// Card value
+        /// </summary>
+        public int Value { get; set; }
     }
 }
