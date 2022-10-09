@@ -3,9 +3,9 @@
 namespace CardGame.Core.Entities
 {
     /// <summary>
-    /// Board class
+    /// Table class
     /// </summary>
-    public class Board : IBoard
+    public class Table : ITable
     {
         /// <summary>
         /// List of players
@@ -13,9 +13,9 @@ namespace CardGame.Core.Entities
         public List<IPlayer> Players { get; set; }
 
         /// <summary>
-        /// Baord constructor
+        /// Table constructor
         /// </summary>
-        public Board()
+        public Table()
         {
             Players = new List<IPlayer>();
         }

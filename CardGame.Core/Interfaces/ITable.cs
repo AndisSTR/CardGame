@@ -1,6 +1,9 @@
 ﻿namespace CardGame.Core.Interfaces
 {
-    public interface IBoard
+    /// <summary>
+    /// Table class interface
+    /// </summary>
+    public interface ITable
     {
         /// <summary>
         /// List of players

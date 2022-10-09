@@ -16,5 +16,10 @@ namespace CardGame.Core.Interfaces
         /// Card suit
         /// </summary>
         Suit Suit { get; set; }
+
+        /// <summary>
+        /// Card value
+        /// </summary>
+        int Value { get; set; }
     }
 }
