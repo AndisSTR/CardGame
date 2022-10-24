@@ -22,5 +22,10 @@ namespace CardGame.Core.Entities
         /// Card value
         /// </summary>
         public int Value { get; set; }
+
+        public override string ToString()
+        {
+            return Rank +" "+ Suit;
+        }
     }
 }

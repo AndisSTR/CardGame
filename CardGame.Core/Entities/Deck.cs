@@ -33,8 +33,8 @@ namespace CardGame.Core.Entities
             var suitLenght = Enum.GetNames(_card.Suit.GetType()).Length;
             var rankLenght = Enum.GetNames(_card.Rank.GetType()).Length;
 
-            Cards = Enumerable.Range(1, suitLenght)
-                .SelectMany(suit => Enumerable.Range(1, rankLenght)
+            Cards = Enumerable.Range(0, suitLenght)
+                .SelectMany(suit => Enumerable.Range(0, rankLenght)
                 .Select(rank => new Card()
                 {
                     Suit = (Suit)suit,

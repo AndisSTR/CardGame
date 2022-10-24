@@ -8,7 +8,7 @@ namespace CardGame.Core.Test
     public class HandTests
     {
         [Fact]
-        public void AddCrard_AfterCardIsAdded_HandShouldReturn_CorrectNumberOfCards()
+        public void AddCard_AfterCardIsAdded_HandShouldReturn_CorrectNumberOfCards()
         {
             // Arrange
             var card = new Mock<ICard>();
